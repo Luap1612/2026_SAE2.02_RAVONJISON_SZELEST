@@ -1,7 +1,21 @@
 import java.util.List;
 import java.util.ArrayList;
 
+/**
+ * Implémentation de l'algorithme de Dijkstra pour rechercher le plus court chemin
+ * dans un graphe avec des poids positifs.
+ */
 public class Dijkstra {
+
+    /**
+     * Résout le problème du plus court chemin en utilisant l'algorithme de Dijkstra.
+     * Explore les nœuds de proche en proche en choisissant toujours celui dont
+     * la distance cumulée est la plus faible.
+     *
+     * @param g      Le graphe sur lequel exécuter l'algorithme.
+     * @param depart Le nœud de départ.
+     * @return Un objet {@link Valeurs} contenant les coûts minimums et les parents de chaque nœud.
+     */
     public Valeurs resoudre(Graphe g, String depart) {
         Valeurs valeurs = new Valeurs();
         List<String> q = new ArrayList<>();

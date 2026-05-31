@@ -1,10 +1,25 @@
 import java.util.List;
 
+/**
+ * Implémentation de l'algorithme du point fixe (Bellman-Ford) pour rechercher
+ * le plus court chemin dans un graphe à partir d'un nœud source.
+ */
 public class BellmanFord {
 
+    /**
+     * Constructeur par défaut.
+     */
     public BellmanFord() {
     }
 
+    /**
+     * Résout le problème du plus court chemin en utilisant l'algorithme de Bellman-Ford.
+     * Initialise les distances à l'infini et les met à jour itérativement jusqu'à convergence.
+     *
+     * @param g      Le graphe sur lequel exécuter l'algorithme.
+     * @param depart Le nœud de départ.
+     * @return Un objet {@link Valeurs} contenant les distances minimales et les parents de chaque nœud.
+     */
     public Valeurs resoudre(Graphe g, String depart) {
         Valeurs valeurs = new Valeurs();
         List<String> noeuds = g.getNoeuds();
